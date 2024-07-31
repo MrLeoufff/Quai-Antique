@@ -49,7 +49,7 @@ const LoadContentPage = async () => {
     // Ajout du contenu JavaScript
     if (actualRoute.pathJS != "") {
         // Création d'une balise script
-        var scriptTag = document.createElement("script");
+        let scriptTag = document.createElement("script");
         scriptTag.setAttribute("type", "text/javascript");
         scriptTag.setAttribute("src", actualRoute.pathJS);
 
@@ -80,3 +80,4 @@ window.onpopstate = LoadContentPage;
 window.route = routeEvent;
 // Chargement du contenu de la page au chargement initial
 LoadContentPage();
+
